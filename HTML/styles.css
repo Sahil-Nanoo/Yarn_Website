@@ -1,0 +1,730 @@
+.pageFormat {
+    border: solid thick rgb(163, 119, 60);
+    background-color: rgba(255, 255, 255, 0.915);
+    width: 1300px;
+    margin: auto;
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* @font-face {
+    font-family: japanese3017;
+    src: url(../Fonts/Japanese\ 3017.otf);
+} */
+
+body {
+    background-image: url('../Images/leavesBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(209, 107, 63, 0.655);
+    /* background color is for padding without hovering */
+
+}
+
+
+li {
+    float: left;
+}
+
+li a,
+.dropButton {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 55px 70px;
+    text-decoration: none;
+    /* padding size for topLinks */
+}
+
+
+li a:hover,
+.dropMenu:hover .dropButton {
+    background-color: rgb(200, 131, 131);
+    /* background color while hovering */
+}
+
+
+li,
+.dropList {
+    display: inline-block;
+}
+
+.dropList {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    background-color: rgb(204, 141, 114);
+    /* color of drop list without hovering */
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+}
+
+
+.dropList a {
+    /* text color droplist */
+    color: rgb(255, 255, 255);
+    padding: 50px 65px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    /* padding size for dropList */
+}
+
+.dropList a:hover {
+    /* color of droplist while hovering */
+    background-color: rgb(187, 115, 115);
+}
+
+.dropMenu:hover .dropList {
+    display: block;
+}
+
+
+#keyConcepts {
+    color: rgb(25, 119, 202);
+}
+
+.borderBottom {
+    border: 10px;
+    border-bottom: solid thin black;
+}
+
+.centerText {
+    text-align: center;
+}
+
+.homeParagraph {
+    width: 960px;
+    margin: auto;
+    text-align: center;
+}
+
+.centerImage {
+    display: block;
+    margin: auto;
+    width: 35%;
+}
+
+#catPic {
+    display: inline-block;
+    float: none;
+    margin-left: 200px;
+}
+
+#dogPic {
+    display: inline-block;
+    float: none;
+    margin-left: 100px;
+}
+
+.bodyLogo {
+    margin-left: 25px;
+
+}
+
+.footerContainer {
+    background: rgba(169, 71, 36, 0.655);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans serif;
+    padding: 45px 30px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.footerContainer .leftFooter,
+.footerContainer .centerFooter,
+.footerContainer .rightFooter {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* left side of the footer */
+
+.footerContainer .leftFooter {
+    width: 40%;
+}
+
+/* company name */
+
+.footerContainer h3 span {
+    color: rgb(165, 42, 42);
+}
+
+.fontSize {
+    font-size: 30px;
+}
+
+.footerContainer .footerLinks {
+    color: rgb(255, 255, 255);
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+/* footer links */
+.footerContainer .footerLinks a {
+    display: inline-block;
+    line-height: 1.8;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footerContainer .copyRight {
+    color: rgb(34, 34, 34);
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* footer center */
+
+.footerContainer .centerFooter {
+    width: 35%;
+}
+
+.footerContainer .centerFooter i {
+    background-color: rgb(51, 56, 59);
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footerContainer .centerFooter i.fa fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footerContainer .centerFooter p {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footerContainer .centerFooter p span {
+    display: block;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 2;
+}
+
+.footerContainer .centerFooter p a {
+    color: rgb(32, 178, 170);
+    text-decoration: none;
+}
+
+.footerContainer .footerLinks a:before {
+    content: "|";
+    font-weight: 300;
+    font-size: 20px;
+    left: 0;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footerContainer .footerLinks .link1:before {
+    content: none;
+}
+
+/* Right Side of the footer */
+
+.footerContainer .rightFooter {
+    width: 20%;
+}
+
+.footerContainer .companySocial {
+    line-height: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footerContainer .companySocial span {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footerContainer .footerIcons {
+    margin-top: 25px;
+}
+
+.footerContainer .footerIcons a {
+    display: inline-block;
+    width: 35px;
+    height: 33px;
+    cursor: pointer;
+    background-color: rgb(51, 56, 59);
+    border-radius: 2px;
+
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+
+#tableBorder {
+    border: solid medium rgb(0, 0, 0);
+    display: inline-block;
+
+}
+
+#tableHeader {
+    border: solid medium rgb(0, 0, 0);
+}
+
+.leftTable,
+.rightTable {
+    border: solid medium rgb(0, 0, 0);
+    text-align: center;
+    width: 55%;
+}
+
+#tableFormat {
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+#contactLayout {
+    display: inline-block;
+}
+
+#contactPicture {
+    margin-left: 30px;
+}
+
+
+#rightSide {
+    float: right;
+    text-align: right;
+    margin-left: 200px;
+    margin-right: 100px;
+}
+
+#leftSide {
+    float: left;
+    margin-left: 20px;
+}
+
+#contactParagraph {
+    margin-left: 50px;
+}
+
+#socialLinks i {
+    font-size: 100px;
+    color: rgb(222, 184, 135);
+    margin-right: 20px;
+}
+
+.productImages img {
+    margin-left: 11px;
+    margin-top: 11px;
+}
+
+
+.productImages {
+    float: left;
+    width: 17%;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 5px;
+    border: solid medium rgb(0, 0, 0);
+}
+
+.productContainer {
+    clear: both;
+    display: table;
+    margin: 15px;
+}
+
+
+.aboutusDog {
+    display: block;
+    margin: auto;
+    width: 30%;
+}
+
+#aboutusPara {
+    text-align: center;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+#aboutPara2 {
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.marginText {
+    margin-left: 20px;
+    width: 700px;
+    display: inline-block;
+}
+
+#loginPic {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    float: left;
+}
+
+.marginText i {
+    font-size: 100px;
+    color: rgb(137, 42, 42);
+}
+
+.marginText td {
+    text-align: right;
+}
+
+.signinPara {
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+
+#signinTable {
+    width: 30%;
+    margin-left: 430px;
+    margin-right: 200px;
+    border: solid thick rgb(222, 184, 135);
+    border-radius: 20px;
+}
+
+
+#signinTable td {
+    border: solid medium rgb(222, 184, 135);
+    border-radius: 100px;
+}
+
+#signinTable tr {
+    text-align: center;
+}
+
+#submitButton {
+    margin-left: 580px;
+    width: 7%;
+}
+
+.donatePara {
+    text-align: center;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.productPara {
+    margin-left: 30px;
+    margin-right: 40px;
+}
+
+#contactForm {
+    margin-left: 20%;
+    margin-top: 1%;
+    width: 60%;
+    border: solid medium rgba(222, 184, 135);
+    text-align: center;
+}
+
+#contactForm table {
+    margin: 10px;
+}
+
+#customerOptions {
+    text-align: left;
+}
+
+#buttonAlign {
+    display: inline;
+    margin-left: 30%;
+}
+
+
+#contactForm td{
+    border: solid thin rgb(116, 73, 16);
+}
+
+#googleForm iframe{
+    width: 70%;
+    height:700px;
+    margin-left: 15%;
+}
+
+/* responsivness */
+
+@media only screen and (max-width: 960px) {
+
+
+    /* Home Page */
+    .pageFormat {
+        width: auto;
+    }
+
+
+    .homeParagraph {
+        font-size: 0.9em;
+        width: auto;
+    }
+
+    .centerImage {
+        width: 90%;
+    }
+
+    .centerImage img {
+        width: 100%;
+        margin: auto;
+    }
+
+    #catPic {
+        width: 100%;
+        margin: 0px;
+        float: none;
+    }
+
+    #catPic img {
+        float: none;
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+    }
+
+    #dogPic {
+        width: 100%;
+        float: none;
+        margin: 0px;
+    }
+
+    #dogPic img {
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+    }
+
+    .bodyLogo img {
+        margin-top: 20px;
+        margin-left: 40px;
+    }
+
+
+    /* About US page */
+    .aboutusDog {
+        width: 100%;
+    }
+
+    .aboutusDog img {
+        width: 90%;
+        margin-left: 15px;
+    }
+
+    /* Contact Us page */
+    #contactParagraph {
+        width: auto;
+        margin: 10px;
+    }
+
+    #contactPicture {
+        margin: 0px;
+        width: 100%;
+    }
+
+    #contactPicture img {
+        width: 95%;
+        margin-left: 5px;
+    }
+
+    #leftSide {
+        margin: 0px;
+    }
+
+    #tableFormat {
+        width: auto;
+        margin: 0px;
+    }
+
+    #tableBorder {
+        width: 100%;
+    }
+
+    #rightSide {
+        margin: 0px;
+    }
+
+    #rightSide img {
+        width: 90%;
+        margin-right: 15px;
+    }
+
+    #rightSide p {
+        text-align: center;
+    }
+
+    #socialLinks i {
+        font-size: 40px;
+        margin-right: 30px;
+    }
+
+    /* Log IN Page */
+    .marginText {
+        width: auto;
+        text-align: center;
+    }
+
+
+    #loginPic {
+        margin: 0px;
+        width: 100%;
+    }
+
+    #loginPic img {
+        width: 90%;
+        margin-left: 15px;
+    }
+
+    /* Sign Up Page */
+    .signinPara {
+        margin: 10px;
+    }
+
+    .signinPara img {
+        width: 100%;
+    }
+
+    #signinTable,
+    #submitButton {
+        margin: 0px;
+    }
+
+    #submitButton {
+        width: 100px;
+        margin-left: 80px;
+    }
+
+    /* Donation Page */
+    .donatePara {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .donatePara p {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+
+    /* Products and Services */
+    .productContainer {
+        width: 100%;
+    }
+
+    .productImages {
+        width: auto;
+        margin-right: 30px;
+    }
+
+    /* Header Responsivness */
+    nav {
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    nav ul li:not(.dropMenu) {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li.dropMenu>.dropList {
+        display: block;
+        margin-left: 15px;
+    }
+
+    nav ul li:not(.dropMenu) {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li.dropMenu>.dropList {
+        position: static;
+        display: none;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    nav ul li.dropMenu:hover>.dropList {
+        display: block;
+    }
+
+    /* footer */
+    .footerContainer {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: bold 1em;
+    }
+
+    .footerContainer .leftFooter,
+    .footerContainer .centerFooter,
+    .footerContainer .rightFooter {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footerContainer .centerFooter i {
+        margin-left: 0;
+    }
+
+
+    #formDiv, #contactForm {
+        width: 100%;
+        display: inline;
+    }
+
+    #buttonAlign {
+        margin-left: 100%;
+    }
+
+    #googleForm iframe {
+        width: 100%;
+        height: 900px;
+        margin: 0;
+    }
+
+}
